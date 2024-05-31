@@ -57,4 +57,14 @@ Visit your server's domain name in your browser.
 
 Since you have already configure an admin account through the command line, you'll be taken to the login page. Enter the credentials you created for the admin user. Click Log In. Your instalation is now complete.
 
+## 7. Manually add files directly into data folder
+In case you're installing this for recovering a previous install and you have the files backed up somewhere, here instructions to manually add them into the data folder. 
+Locate the data folder, as this was a snap install, it should be somewhere in this folder `/var/snap/nextcloud/common/nextcliud/data/user/files`
+In order to access this filder need to be root:
+
+`sudo su`
+
+Copy the file you from the backup drive. Once done type `exit` to drop root user. Finally indexing the files so nextcloud recognizes it and add them to database:
+
+`sudo nextcloud.occ files:scan --all -vvv`
 
