@@ -20,12 +20,11 @@ When installing from the command line, Nextcloud restricts the host names that t
 
 To view the current settings:
 
-`sudo nextcloud.occ config:system:get trusted_domains
-
+`sudo nextcloud.occ config:system:get trusted_domains`
 If you just installed, only `localhost` should be present as the first value in the array.
 We can add an entry for our server's domain name or IP address by typing:
 
-`sudo nextcloud.occ config.system:set trusted_domains 1 --value=example.com`
+`sudo nextcloud.occ config:system:set trusted_domains 1 --value=example.com`
 
 If we query the trusted domains again, we will see that we now have to entries.
 
